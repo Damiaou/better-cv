@@ -10,6 +10,7 @@ import {
   Skills,
   Ls,
   Userhistoryline,
+  Me,
 } from "./UserReturns"
 
 const startingEvent = [
@@ -109,6 +110,10 @@ export default function Terminal() {
         }
         case "ls": {
           addEvent(<Ls />)
+          break
+        }
+        case "me": {
+          addEvent(<Me />)
           break
         }
 
