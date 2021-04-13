@@ -1,25 +1,72 @@
-import React from "react"
+import React, { useReducer } from "react"
+import { motion } from "framer-motion"
 
 import "./animation.css"
 
-export function France() {
+const usefull = [
+  { id: "st-lo-circle", hovered: false },
+  { id: "rennes-circle", hovered: false },
+  { id: "suisse-circle", hovered: false },
+  { id: "st-brieuc-circle", hovered: false },
+]
+
+export function France({ hoveredDispatch, isHovered }) {
+  // Move the reducer from here to userreturn experiences function to dispatch ;) to circle AND card
+  function handleMouseEnter(e) {
+    console.log(e.target)
+    console.log("handleMouseEnter elm")
+    hoveredDispatch({ type: "hovered", payload: { id: e.target.id } })
+  }
+
+  function handleMouseOut(e) {
+    console.log("handleMouseOut elm")
+    hoveredDispatch({ type: "unhovered", payload: { id: e.target.id } })
+  }
   return (
-    <div>
+    <div className="flex justify-around">
       {/* <! --- min-x, min-y, width, height---!> */}
-      <div class="svg-wrapper">
-        <svg height="200" width="400" xmlns="http://www.w3.org/2000/svg">
+      <div className="svg-wrapper">
+        <svg height="400" width="400" xmlns="http://www.w3.org/2000/svg">
           <polygon
-            class="shape"
-            points="80,80 200,20 320,80 260,180 140,180"
+            className="shape"
+            points="80,80 200,20 320,80 320,250 200,300 80,250"
             fill="transparent"
           ></polygon>
-          <circle id="st-lo-circle" cx="135" cy="65" r="5" />
-          <line id="from-1-to-2" x1="135" y1="65" x2="125" y2="82" />
-          <circle id="rennes-circle" cx="125" cy="82" r="5" />
-          <line id="from-2-to-3" x1="125" y1="82" x2="275" y2="125" />
-          <circle id="suisse-circle" cx="275" cy="125" r="5" />
-          <line id="from-3-to-4" x1="275" y1="125" x2="105" y2="82" />
-          <circle id="st-brieuc-circle" cx="105" cy="82" r="5" />
+          <circle
+            id="st-lo"
+            cx="135"
+            cy="60"
+            r={isHovered("st-lo") ? 10 : 5}
+            onMouseEnter={e => handleMouseEnter(e)}
+            onMouseLeave={e => handleMouseOut(e)}
+          />
+          <line id="from-1-to-2" x1="135" y1="60" x2="135" y2="90" />
+          <circle
+            id="rennes"
+            cx="135"
+            cy="90"
+            r={isHovered("rennes") ? 10 : 5}
+            onMouseEnter={e => handleMouseEnter(e)}
+            onMouseLeave={e => handleMouseOut(e)}
+          />
+          <line id="from-2-to-3" x1="135" y1="90" x2="300" y2="180" />
+          <circle
+            id="suisse"
+            cx="300"
+            cy="180"
+            r={isHovered("suisse") ? 10 : 5}
+            onMouseEnter={e => handleMouseEnter(e)}
+            onMouseLeave={e => handleMouseOut(e)}
+          />
+          <line id="from-3-to-4" x1="300" y1="180" x2="105" y2="80" />
+          <circle
+            id="st-brieuc"
+            cx="105"
+            cy="80"
+            r={isHovered("st-brieuc") ? 10 : 5}
+            onMouseEnter={e => handleMouseEnter(e)}
+            onMouseLeave={e => handleMouseOut(e)}
+          />
         </svg>
       </div>
     </div>

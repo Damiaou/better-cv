@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useReducer } from "react"
 import { France } from "./Animation"
 import { BlankCanvas } from "./BlankCanvas"
 import Iut from "./Iut"
+import CardJobs from "./Jobs/CardJobs"
+import { StLo, Rennes, Suisse, StBrieuc } from "./Jobs/Jobs"
 
 export function Help() {
   return (
@@ -42,10 +44,49 @@ export function Userhistoryline({ command }) {
 export function Hobbies() {
   return <p>hobbies</p>
 }
+
+function experiencesReducer(state, action) {
+  switch (action.type) {
+    case "hovered": {
+      // remove line with my elm
+      let newState = state.filter(elm => elm.id !== action.payload.id)
+      return [...newState, { id: action.payload.id, hovered: true }]
+    }
+    case "unhovered": {
+      // remove line with my elm
+      let newState = state.filter(elm => elm.id !== action.payload.id)
+      return [...newState, { id: action.payload.id, hovered: false }]
+    }
+
+    default: {
+      console.error(`Type not handled`, action)
+    }
+  }
+}
 export function Experiences() {
+  // TODO Bring delay bakc on card and sync hover between places on the map and the cards
+  // Might be good to use framer for the SVG part
+  const [state, hoveredDispatch] = useReducer(experiencesReducer, [])
+
+  const isHovered = id => {
+    // Need to check if is hovered, if yes return true, if not or not found return false
+    console.log("state on hover", state)
+    console.log(
+      "isHovered ?",
+      state ? !!state.find(elm => elm.id === id && elm.hovered) : false
+    )
+    return state ? !!state.find(elm => elm.id === id && elm.hovered) : false
+  }
+
   return (
     <BlankCanvas>
-      <France />
+      <France hoveredDispatch={hoveredDispatch} isHovered={isHovered} />
+      <CardJobs>
+        <StLo hoveredDispatch={hoveredDispatch} isHovered={isHovered} />
+        <Rennes hoveredDispatch={hoveredDispatch} isHovered={isHovered} />
+        <Suisse hoveredDispatch={hoveredDispatch} isHovered={isHovered} />
+        <StBrieuc hoveredDispatch={hoveredDispatch} isHovered={isHovered} />
+      </CardJobs>
     </BlankCanvas>
   )
 }
@@ -73,7 +114,8 @@ export function Skills() {
           Having fun PHP, NodeJS and Python to create efficient backend for apps
         </li>
         <li>
-          Messing around with Git, Docker and CLI tools from lovely developers
+          Messing around with Git, Docker and CLI tools from other great
+          developers
         </li>
       </ul>
     </div>
