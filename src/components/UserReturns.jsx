@@ -107,11 +107,11 @@ export function Skills() {
       <ul className="pl-4">
         <li>Solving users problems</li>
         <li>
-          Using React to build nice applications (like this one) powered up with
-          Next or Gatsby
+          Using React to build nice applications powered up by Next or Gatsby
         </li>
         <li>
-          Having fun PHP, NodeJS and Python to create efficient backend for apps
+          Having fun with PHP, NodeJS and Python to create efficient backend for
+          apps
         </li>
         <li>
           Messing around with Git, Docker and CLI tools from other great

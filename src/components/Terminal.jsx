@@ -6,7 +6,6 @@ import {
   Hobbies,
   Experiences,
   Schools,
-  Interests,
   Skills,
   Ls,
   Userhistoryline,
@@ -98,10 +97,6 @@ export default function Terminal() {
         }
         case "schools": {
           addEvent(<Schools />)
-          break
-        }
-        case "interests": {
-          addEvent(<Interests />)
           break
         }
         case "skills": {
