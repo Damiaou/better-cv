@@ -15,7 +15,6 @@ export function Help() {
       <pre className="text-yellow-200"> hobbies</pre>
       <pre className="text-yellow-200"> experiences</pre>
       <pre className="text-yellow-200"> schools</pre>
-      <pre className="text-yellow-200"> interests</pre>
       <pre className="text-yellow-200"> skills</pre>
       <pre className="text-yellow-200"> me</pre>
       <p>to get to know me more</p>

@@ -11,6 +11,7 @@ import {
   Userhistoryline,
   Me,
 } from "./UserReturns"
+import { commands } from "../utils/autofill"
 
 const startingEvent = [
   <>
@@ -128,9 +129,16 @@ export default function Terminal() {
       }
     } else if (e.key === "Tab") {
       e.preventDefault()
-      console.log(
-        "Go to work and make autocompletion based on an array of possible command"
-      )
+      // First we need to get the userInput -> trimLowered
+      // Then we map all commands
+      commands.map(command => {
+        if (command.startsWith(trimLowered)) {
+          // If userInput begin like on of these command, set this command as userInput
+          setUserInput(command)
+        }
+      })
+
+      // If you want, try to add the possiblity to loop the available command matching the start
     }
   }
 
