@@ -4,6 +4,7 @@ import { BlankCanvas } from "./BlankCanvas"
 import Iut from "./Iut"
 import CardJobs from "./Jobs/CardJobs"
 import { StLo, Rennes, Suisse, StBrieuc } from "./Jobs/Jobs"
+import { Wall } from "./Hobbies"
 
 export function Help() {
   return (
@@ -41,7 +42,11 @@ export function Userhistoryline({ command }) {
 }
 
 export function Hobbies() {
-  return <p>hobbies</p>
+  return (
+    <BlankCanvas>
+      <Wall />
+    </BlankCanvas>
+  )
 }
 
 function experiencesReducer(state, action) {

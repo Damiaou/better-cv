@@ -1,5 +1,5 @@
 import React from "react"
 
 export function BlankCanvas({ children }) {
-  return <div>{children}</div>
+  return <div className="flex justify-center">{children}</div>
 }
