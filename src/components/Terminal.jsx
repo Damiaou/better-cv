@@ -48,7 +48,8 @@ const startingEvent = [
       }}
       transition={{ ease: "easeOut", duration: 0.2, delay: 2.8 }}
     >
-      Type `help` to access the list of commands
+      Type <span className="text-yellow-200">help</span> to access the list of
+      commands
     </motion.p>
   </>,
 ]
