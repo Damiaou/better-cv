@@ -1,0 +1,60 @@
+.surfboard {
+    position: relative;
+    width: 180px;
+    height: 500px;
+    background: rgba(239, 68, 68, 0.8);
+    border-style: solid;
+    /*   border-width: 100px 100px 100px 100px; */
+    border-bottom-right-radius: 85%;
+    border-bottom-left-radius: 85%;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    /*   transform: rotate(45deg) */
+  }
+  .surfboard::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 55px;
+    background-color: rgb(252,211,77);
+    bottom: 65px;
+    left: calc(100%/2);
+  }
+  
+  #hold-1 {
+    background-color: rgb(147, 197, 253);
+  }
+  #hold-2 {
+    background-color: rgb(245, 158, 11);
+  }
+  #hold-3 {
+    background-color: rgb(16, 185, 129);
+  }
+  #hold-4 {
+    background-color: rgb(249, 168, 212);
+  }
+  #hold-5 {
+    background-color: rgb(220, 38, 38);
+  }
+  #hold-6 {
+    background-color: rgb(129, 140, 248);
+  }
+  #hold-7 {
+    background-color: rgb(91, 33, 182);
+  }
+  #hold-0 {
+    background-color: rgb(252, 211, 77);
+  }
+  
+  .holds {
+    width: 25px;
+    height: 15px;
+    border-radius: 0 0 13px 13px;
+    border-top: 5px;
+  }
+
+  .good-wall {
+      /* Not convinced for now */
+    /* filter: drop-shadow( 10px -15px 0px rgba(199, 199, 199, 0.7)); */
+  }
+  
