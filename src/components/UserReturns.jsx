@@ -18,8 +18,25 @@ export function Help() {
       <pre className="text-yellow-200"> schools</pre>
       <pre className="text-yellow-200"> skills</pre>
       <pre className="text-yellow-200"> me</pre>
+      <pre className="text-yellow-200"> github</pre>
       <p>to get to know me more</p>
     </div>
+  )
+}
+
+export function Github() {
+  return (
+    <p>
+      You can find the source of this{" "}
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/Damiaou/better-cv"
+        className="underline text-yellow-300 hover:text-yellow-600"
+      >
+        here
+      </a>
+    </p>
   )
 }
 

@@ -10,6 +10,7 @@ import {
   Ls,
   Userhistoryline,
   Me,
+  Github,
 } from "./UserReturns"
 import { commands } from "../utils/autofill"
 
@@ -111,6 +112,10 @@ export default function Terminal() {
         }
         case "me": {
           addEvent(<Me />)
+          break
+        }
+        case "github": {
+          addEvent(<Github />)
           break
         }
 
