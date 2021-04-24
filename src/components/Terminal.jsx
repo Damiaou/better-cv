@@ -11,6 +11,7 @@ import {
   Userhistoryline,
   Me,
   Github,
+  Contact,
 } from "./UserReturns"
 import { commands } from "../utils/autofill"
 
@@ -116,6 +117,10 @@ export default function Terminal() {
         }
         case "github": {
           addEvent(<Github />)
+          break
+        }
+        case "contact": {
+          addEvent(<Contact />)
           break
         }
 

@@ -6,6 +6,7 @@ import CardJobs from "./Jobs/CardJobs"
 import { StLo, Rennes, Suisse, StBrieuc } from "./Jobs/Jobs"
 import { Wall } from "./Hobbies"
 import { StaticImage } from "gatsby-plugin-image"
+import { OutLink } from "./OutLink"
 
 export function Help() {
   return (
@@ -29,14 +30,14 @@ export function Github() {
   return (
     <p>
       You can find the source of this{" "}
-      <a
+      <OutLink
         target="_blank"
         rel="noopener noreferrer"
         href="https://github.com/Damiaou/better-cv"
         className="underline text-yellow-300 hover:text-yellow-600"
       >
         here
-      </a>
+      </OutLink>
     </p>
   )
 }
@@ -149,4 +150,12 @@ export function Ls() {
 
 export function Me() {
   return <StaticImage src="../images/my-face.jpg" />
+}
+
+export function Contact() {
+  return (
+    <span>
+      <OutLink href="mailto:damsauvagere@gmail.com">Contact me</OutLink>
+    </span>
+  )
 }
