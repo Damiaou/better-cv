@@ -102,13 +102,15 @@ export function Experiences() {
 
   return (
     <BlankCanvas>
-      <France hoveredDispatch={hoveredDispatch} isHovered={isHovered} />
-      <CardJobs>
-        <StLo hoveredDispatch={hoveredDispatch} isHovered={isHovered} />
-        <Rennes hoveredDispatch={hoveredDispatch} isHovered={isHovered} />
-        <Suisse hoveredDispatch={hoveredDispatch} isHovered={isHovered} />
-        <StBrieuc hoveredDispatch={hoveredDispatch} isHovered={isHovered} />
-      </CardJobs>
+      <div className="w-full">
+        <France hoveredDispatch={hoveredDispatch} isHovered={isHovered} />
+        <CardJobs>
+          <StLo hoveredDispatch={hoveredDispatch} isHovered={isHovered} />
+          <Rennes hoveredDispatch={hoveredDispatch} isHovered={isHovered} />
+          <Suisse hoveredDispatch={hoveredDispatch} isHovered={isHovered} />
+          <StBrieuc hoveredDispatch={hoveredDispatch} isHovered={isHovered} />
+        </CardJobs>
+      </div>
     </BlankCanvas>
   )
 }
@@ -119,9 +121,7 @@ export function Schools() {
     </>
   )
 }
-export function Interests() {
-  return <p>interests</p>
-}
+
 export function Skills() {
   return (
     <div>
