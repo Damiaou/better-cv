@@ -5,6 +5,7 @@ import Iut from "./Iut"
 import CardJobs from "./Jobs/CardJobs"
 import { StLo, Rennes, Suisse, StBrieuc } from "./Jobs/Jobs"
 import { Wall } from "./Hobbies"
+import { StaticImage } from "gatsby-plugin-image"
 
 export function Help() {
   return (
@@ -147,5 +148,5 @@ export function Ls() {
 }
 
 export function Me() {
-  return <span>My face in an image :D</span>
+  return <StaticImage src="../images/my-face.jpg" />
 }
