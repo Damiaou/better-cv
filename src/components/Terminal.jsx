@@ -12,6 +12,7 @@ import {
   Me,
   Github,
   Contact,
+  Projects,
 } from "./UserReturns"
 import { commands } from "../utils/autofill"
 
@@ -121,6 +122,10 @@ export default function Terminal() {
         }
         case "contact": {
           addEvent(<Contact />)
+          break
+        }
+        case "projects": {
+          addEvent(<Projects />)
           break
         }
 

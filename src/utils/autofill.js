@@ -8,5 +8,6 @@ export const commands = [
     'ls',
     'me',
     'contact',
+    'projects',
     'github'
 ]

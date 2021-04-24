@@ -159,3 +159,28 @@ export function Contact() {
     </span>
   )
 }
+
+export function Projects() {
+  return (
+    <div>
+      <h4>You can find some projects of mine here : </h4>
+      <ul>
+        <li className="ml-4">
+          A <OutLink href="https://tasks.damien.link">task manager</OutLink>{" "}
+          (wip)
+        </li>
+        <li className="ml-4">
+          My <OutLink href="https://blog.damien.link">blog</OutLink>
+        </li>
+        <li className="ml-4">
+          An app that tells you what kind of animal you were in a{" "}
+          <OutLink href="https://past.damien.link">past live</OutLink>
+        </li>
+        <li className="ml-4">
+          I've always loved{" "}
+          <OutLink href="https://liveit.damien.link/">this quote</OutLink>
+        </li>
+      </ul>
+    </div>
+  )
+}
