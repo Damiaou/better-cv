@@ -159,7 +159,7 @@ export default function Terminal() {
   }
 
   return (
-    <>
+    <div className="md:block hidden">
       {events.map((event, key) => {
         return (
           <motion.div
@@ -207,6 +207,6 @@ export default function Terminal() {
           />
         </div>
       </motion.div>
-    </>
+    </div>
   )
 }

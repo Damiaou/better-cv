@@ -25,6 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="h-screen flex flex-col">
+      
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main className="box-border  flex-1">{children}</main>
     </div>
