@@ -13,6 +13,7 @@ import {
   Github,
   Contact,
   Projects,
+  Status,
 } from "./UserReturns"
 import { commands } from "../utils/autofill"
 
@@ -126,6 +127,10 @@ export default function Terminal() {
         }
         case "projects": {
           addEvent(<Projects />)
+          break
+        }
+        case "status": {
+          addEvent(<Status />)
           break
         }
 

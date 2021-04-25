@@ -9,5 +9,6 @@ export const commands = [
     'me',
     'contact',
     'projects',
-    'github'
+    'github',
+    'status'
 ]

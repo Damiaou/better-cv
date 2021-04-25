@@ -23,6 +23,7 @@ export function Help() {
       <pre className="text-yellow-200"> github</pre>
       <pre className="text-yellow-200"> contact</pre>
       <pre className="text-yellow-200"> projects</pre>
+      <pre className="text-yellow-200"> status</pre>
       <p>to get to know me more</p>
     </div>
   )
@@ -128,7 +129,7 @@ export function Schools() {
 export function Skills() {
   return (
     <div>
-      <p>Well, I'm getting better everyday at things like </p>
+      <p>Well, I am getting better everyday at things like </p>
       <ul className="pl-4">
         <li>Solving users problems</li>
         <li>
@@ -152,6 +153,15 @@ export function Ls() {
 
 export function Me() {
   return <StaticImage src="../images/my-face.jpg" />
+}
+
+export function Status() {
+  return (
+    <p>
+      I am currently looking for front end developer opportunities, you can{" "}
+      <OutLink href="mailto:damsauvagere@gmail.com">contact me</OutLink>
+    </p>
+  )
 }
 
 export function Contact() {
