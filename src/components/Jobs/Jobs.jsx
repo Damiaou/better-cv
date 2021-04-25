@@ -14,12 +14,13 @@ export function StLo({ hoveredDispatch, isHovered }) {
     "Main classes : web development with various languages like HTML, CSS, PHP, Java, Javascript.\n\
   Secondary : communication and design classes."
   return (
-    <>
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      transition={{ ease: "easeOut", duration: 0.5, delay: 1 }}
+    >
       <motion.div
         animate={animateProperties}
-        initial={{
-          opacity: 0,
-        }}
         transition={{ ease: "easeOut", duration: 0.5 }}
       >
         <Card
@@ -30,7 +31,7 @@ export function StLo({ hoveredDispatch, isHovered }) {
           id="st-lo"
         />
       </motion.div>
-    </>
+    </motion.div>
   )
 }
 
@@ -46,7 +47,11 @@ export function Rennes({ hoveredDispatch, isHovered }) {
     opacity: 1,
   }
   return (
-    <>
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      transition={{ ease: "easeOut", duration: 0.5, delay: 3 }}
+    >
       <motion.div
         animate={animateProperties}
         initial={{
@@ -62,7 +67,7 @@ export function Rennes({ hoveredDispatch, isHovered }) {
           id="rennes"
         />
       </motion.div>
-    </>
+    </motion.div>
   )
 }
 
@@ -76,7 +81,11 @@ export function Suisse({ hoveredDispatch, isHovered }) {
     opacity: 1,
   }
   return (
-    <>
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      transition={{ ease: "easeOut", duration: 0.5, delay: 5 }}
+    >
       <motion.div
         animate={animateProperties}
         initial={{
@@ -92,7 +101,7 @@ export function Suisse({ hoveredDispatch, isHovered }) {
           id="suisse"
         />
       </motion.div>
-    </>
+    </motion.div>
   )
 }
 
@@ -106,7 +115,11 @@ export function StBrieuc({ hoveredDispatch, isHovered }) {
     opacity: 1,
   }
   return (
-    <>
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      transition={{ ease: "easeOut", duration: 0.5, delay: 7 }}
+    >
       <motion.div
         animate={animateProperties}
         initial={{
@@ -122,6 +135,6 @@ export function StBrieuc({ hoveredDispatch, isHovered }) {
           id="st-brieuc"
         />
       </motion.div>
-    </>
+    </motion.div>
   )
 }
