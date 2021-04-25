@@ -165,7 +165,7 @@ export function Contact() {
 export function Projects() {
   return (
     <div>
-      <h4>You can find some projects of mine here : </h4>
+      <h4>Here are some of my personal projects : </h4>
       <ul>
         <li className="ml-4">
           A <OutLink href="https://tasks.damien.link">task manager</OutLink>{" "}

@@ -19,35 +19,37 @@
 /*
   Now is the point part
 */ 
-circle {
-  fill: #edcf2e;
-  animation-name: pop;
-  animation-duration: 0.5s;
-  opacity: 0;
-  animation-fill-mode: forwards;
-  transition: ease 0.5s r;
-}
-
-circle#st-lo-circle {
-  animation-delay: 1s;
-}
-
-circle#rennes-circle {
-  animation-delay: 3s;
-}
-
-circle#suisse-circle {
-  animation-delay: 5s;
-}
-
-circle#st-brieuc-circle {
-  animation-delay: 7s;
-}
 
 @keyframes pop {
   100% {
     opacity: 1;
   }
+}
+
+circle {
+  fill: #edcf2e;
+  animation-name: pop;
+  animation-duration: 0.5s;
+  
+  opacity: 0;
+  animation-fill-mode: forwards;
+  transition: ease 0.5s r;
+}
+
+circle#st-lo {
+  animation-delay: 1s;
+}
+
+circle#rennes {
+  animation-delay: 3s;
+}
+
+circle#suisse {
+  animation-delay: 5s;
+}
+
+circle#st-brieuc {
+  animation-delay: 7s;
 }
 
 /*

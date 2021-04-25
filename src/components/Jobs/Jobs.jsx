@@ -69,7 +69,7 @@ export function Rennes({ hoveredDispatch, isHovered }) {
 export function Suisse({ hoveredDispatch, isHovered }) {
   let content =
     "Working in a team to build features for a passport managment system.\n\n\n\
-    Building a SaaS mode cash register software for drycleaners with a in-home framework."
+    Building a SaaS mode cash register software for drycleaners with an in-home framework."
   const elmIsHovered = isHovered("suisse")
   let animateProperties = {
     scale: elmIsHovered ? 1.2 : 1,
