@@ -14,6 +14,7 @@ import {
   Contact,
   Projects,
   Status,
+  Resume,
 } from "./UserReturns"
 import { commands } from "../utils/autofill"
 
@@ -133,6 +134,10 @@ export default function Terminal() {
           addEvent(<Status />)
           break
         }
+        case "resume": {
+          addEvent(<Resume />)
+          break
+        }
 
         default: {
           addEvent(<UnknownCommand command={trimLowered} />)
@@ -158,8 +163,6 @@ export default function Terminal() {
           setUserInput(command)
         }
       })
-
-      // If you want, try to add the possiblity to loop the available command matching the start
     }
   }
 

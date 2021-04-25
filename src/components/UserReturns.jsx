@@ -7,6 +7,7 @@ import { StLo, Rennes, Suisse, StBrieuc } from "./Jobs/Jobs"
 import { Wall } from "./Hobbies"
 import { StaticImage } from "gatsby-plugin-image"
 import { OutLink } from "./OutLink"
+import CV from "../files/Damien_CV_FINAL.pdf"
 
 export function Help() {
   return (
@@ -167,8 +168,17 @@ export function Status() {
 export function Contact() {
   return (
     <span>
-      <OutLink href="mailto:damsauvagere@gmail.com">Contact me</OutLink>
+      <OutLink href="mailto:damsauvagere@gmail.com">Contact me</OutLink> by
+      email
     </span>
+  )
+}
+
+export function Resume() {
+  return (
+    <p>
+      Here is <OutLink href={CV}>my resume</OutLink> in pdf
+    </p>
   )
 }
 

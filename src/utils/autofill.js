@@ -10,5 +10,6 @@ export const commands = [
     'contact',
     'projects',
     'github',
-    'status'
+    'status',
+    'resume'
 ]
