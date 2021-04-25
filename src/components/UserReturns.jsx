@@ -21,6 +21,8 @@ export function Help() {
       <pre className="text-yellow-200"> skills</pre>
       <pre className="text-yellow-200"> me</pre>
       <pre className="text-yellow-200"> github</pre>
+      <pre className="text-yellow-200"> contact</pre>
+      <pre className="text-yellow-200"> projects</pre>
       <p>to get to know me more</p>
     </div>
   )
