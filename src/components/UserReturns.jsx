@@ -187,21 +187,7 @@ export function Projects() {
     <div>
       <h4>Here are some of my personal projects : </h4>
       <ul>
-        <li className="ml-4">
-          A <OutLink href="https://tasks.damien.link">task manager</OutLink>{" "}
-          (wip)
-        </li>
-        <li className="ml-4">
-          My <OutLink href="https://blog.damien.link">blog</OutLink>
-        </li>
-        <li className="ml-4">
-          An app that tells you what kind of animal you were in a{" "}
-          <OutLink href="https://past.damien.link">past live</OutLink>
-        </li>
-        <li className="ml-4">
-          I've always loved{" "}
-          <OutLink href="https://liveit.damien.link/">this quote</OutLink>
-        </li>
+        <li>So ! I'm restoring all the apps now, come back in a few days.</li>
       </ul>
     </div>
   )
